@@ -24,7 +24,7 @@ class TagsInStore(MethodView):
         tag = TagModel(**tag_data, store_id=store_id)
 
         try:
-            db. session.add(tag)
+            db.session.add(tag)
             db.session.commit()
         except SQLAlchemyError as e:
             abort(

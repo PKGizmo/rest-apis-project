@@ -60,6 +60,7 @@ class TokenRefresh(MethodView):
         BLOCKLIST.add(jti)
         return {"access_token": new_token}
 
+
 @blp.route("/logout")
 class UserLogout(MethodView):
     @jwt_required()
